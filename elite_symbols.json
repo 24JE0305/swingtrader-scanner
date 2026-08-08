@@ -1,0 +1,122 @@
+[
+  {
+    "symbol": "GRANULES",
+    "ret_per_trade": 7.18,
+    "avg_hold_days": 11.9
+  },
+  {
+    "symbol": "BHEL",
+    "ret_per_trade": 3.11,
+    "avg_hold_days": 12.1
+  },
+  {
+    "symbol": "MUTHOOTFIN",
+    "ret_per_trade": 5.63,
+    "avg_hold_days": 10.4
+  },
+  {
+    "symbol": "OFSS",
+    "ret_per_trade": 5.6,
+    "avg_hold_days": 13.9
+  },
+  {
+    "symbol": "AUROPHARMA",
+    "ret_per_trade": 4.03,
+    "avg_hold_days": 11.3
+  },
+  {
+    "symbol": "VEDL",
+    "ret_per_trade": 3.79,
+    "avg_hold_days": 10.7
+  },
+  {
+    "symbol": "CHOLAFIN",
+    "ret_per_trade": 2.28,
+    "avg_hold_days": 12.6
+  },
+  {
+    "symbol": "HINDALCO",
+    "ret_per_trade": 3.29,
+    "avg_hold_days": 15.3
+  },
+  {
+    "symbol": "NATIONALUM",
+    "ret_per_trade": 2.45,
+    "avg_hold_days": 11.2
+  },
+  {
+    "symbol": "INDIGO",
+    "ret_per_trade": 2.69,
+    "avg_hold_days": 11.1
+  },
+  {
+    "symbol": "SHRIRAMFIN",
+    "ret_per_trade": 2.88,
+    "avg_hold_days": 13.0
+  },
+  {
+    "symbol": "VOLTAS",
+    "ret_per_trade": 3.33,
+    "avg_hold_days": 11.0
+  },
+  {
+    "symbol": "IPCALAB",
+    "ret_per_trade": 3.21,
+    "avg_hold_days": 12.9
+  },
+  {
+    "symbol": "BHARTIARTL",
+    "ret_per_trade": 3.03,
+    "avg_hold_days": 8.7
+  },
+  {
+    "symbol": "COALINDIA",
+    "ret_per_trade": 2.42,
+    "avg_hold_days": 12.4
+  },
+  {
+    "symbol": "HINDPETRO",
+    "ret_per_trade": 2.61,
+    "avg_hold_days": 11.6
+  },
+  {
+    "symbol": "LAURUSLABS",
+    "ret_per_trade": 2.25,
+    "avg_hold_days": 12.4
+  },
+  {
+    "symbol": "BPCL",
+    "ret_per_trade": 2.11,
+    "avg_hold_days": 13.6
+  },
+  {
+    "symbol": "JSWSTEEL",
+    "ret_per_trade": 2.39,
+    "avg_hold_days": 13.4
+  },
+  {
+    "symbol": "BEL",
+    "ret_per_trade": 1.67,
+    "avg_hold_days": 12.7
+  },
+  {
+    "symbol": "BIOCON",
+    "ret_per_trade": 1.95,
+    "avg_hold_days": 11.8
+  },
+  {
+    "symbol": "MARICO",
+    "ret_per_trade": 1.86,
+    "avg_hold_days": 13.1
+  },
+  {
+    "symbol": "M&M",
+    "ret_per_trade": 2.1,
+    "avg_hold_days": 10.9
+  },
+  {
+    "symbol": "TVSMOTOR",
+    "ret_per_trade": 1.69,
+    "avg_hold_days": 11.0
+  }
+]
