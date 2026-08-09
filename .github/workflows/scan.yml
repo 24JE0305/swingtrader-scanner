@@ -3,7 +3,12 @@ name: SwingTrader Daily Scan
 on:
   schedule:
     - cron: "5 10 * * 1-5"  # 3:35 PM IST, Mon-Fri
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: "Force run even on weekend/holiday (testing only)"
+        type: boolean
+        default: false
 
 jobs:
   scan:
@@ -22,4 +27,5 @@ jobs:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          FORCE_RUN: ${{ github.event.inputs.force_run }}
         run: python daily_scanner.py
