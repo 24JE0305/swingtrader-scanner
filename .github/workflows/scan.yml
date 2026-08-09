@@ -2,27 +2,24 @@ name: SwingTrader Daily Scan
 
 on:
   schedule:
-    # 10:05 UTC = 3:35 PM IST, Mon-Fri. GitHub's scheduler can lag by
-    # a few minutes at busy times — that's fine for an EOD scan.
-    - cron: "5 10 * * 1-5"
-  workflow_dispatch: {}   # lets you click "Run workflow" manually to test
+    - cron: "5 10 * * 1-5"  # 3:35 PM IST, Mon-Fri
+  workflow_dispatch: {}
 
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install -r requirements.txt
-
       - name: Run scanner
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          ACTIVE_SYMBOLS: ${{ vars.ACTIVE_SYMBOLS }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         run: python daily_scanner.py
