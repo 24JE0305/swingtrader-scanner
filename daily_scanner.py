@@ -1,4 +1,4 @@
-"""
+f"""
 SwingTrader — Real Daily Scanner (Phase 4)
 ============================================
 Runs at 3:35 PM IST on weekdays (skips NSE holidays automatically).
@@ -295,7 +295,8 @@ def main():
     # ── 2. Entry scan, only if a slot is free ──
     free_slots = MAX_SLOTS - len(positions)
     if free_slots <= 0:
-        print("No free slots — skipping entry scan.")
+        held = ", ".join(p["symbol"] for p in positions)
+        send_telegram(f"📡 Scan — {today.strftime('%d %b %Y')}\nBoth slots full ({held}) — skipping entry scan.")
         return
 
     nifty_raw = fetch_daily("^NSEI")
