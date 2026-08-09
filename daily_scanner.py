@@ -258,12 +258,17 @@ def main():
     now_ist = datetime.datetime.now(IST)
     today = now_ist.date()
 
-    if today.weekday() >= 5:
-        print("Weekend — skipping.")
-        return
-    if today.isoformat() in NSE_HOLIDAYS_2026:
-        send_telegram(f"📅 {today.strftime('%d %b %Y')} is an NSE trading holiday — no scan today.")
-        return
+    force_run = os.environ.get("FORCE_RUN", "").lower() == "true"
+
+    if not force_run:
+        if today.weekday() >= 5:
+            print("Weekend — skipping (silent, real schedule only).")
+            return
+        if today.isoformat() in NSE_HOLIDAYS_2026:
+            send_telegram(f"📅 {today.strftime('%d %b %Y')} is an NSE trading holiday — no scan today.")
+            return
+    else:
+        send_telegram(f"🧪 Forced test run — {today.strftime('%d %b %Y')} ({today.strftime('%A')}). Ignoring weekend/holiday check.")
 
     positions = get_positions()
     elite_df = load_elite_universe()
